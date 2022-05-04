@@ -15,7 +15,7 @@ function onPlay() {
 
 function updateTime() {
     const savedTime = localStorage.getItem(LOCALSTORAGE_KEY);
-    player.setCurrentTime(savedTime).then(function(seconds) {
+    player.setCurrentTime(savedTime).then(function (seconds) {
         console.log(seconds);
     }).catch(function (error) {
         switch (error.name) {
