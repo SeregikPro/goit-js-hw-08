@@ -21,7 +21,10 @@ function onTextareaInput(e) {
     localStorage.setItem(STORAGE_KEY, message);
 }
 
-// function populateTextarea(e) {
-//     const email = e.target.value;
-//     localStorage.setItem(STORAGE_KEY, email);
-// }
+function populateTextarea() {
+    const savedMessage = localStorage.getItem(STORAGE_KEY);
+
+    if(savedMessage) {
+        refs.textarea.value = savedMessage
+    }
+}
